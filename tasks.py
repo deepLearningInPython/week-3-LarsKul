@@ -80,9 +80,16 @@ def compute_output_size_2d(input_matrix, kernel_matrix):
 # Your code here:
 # -----------------------------------------------
 def convolute_2d(input_matrix, kernel_matrix):
-    # Tip: same tips as above, but you might need a nested loop here in order to
-    # define which parts of the input matrix need to be multiplied with the kernel matrix.
-    pass
+    dim_out = compute_output_size_2d(input_matrix, kernel_matrix)
+    dim_kernel = kernel_matrix.shape
+    output_matrix = np.zeros(dim_out)
+    for i in range(dim_out[0]):
+        for j in range(dim_out[1]):
+            selection = input_matrix[i : i + dim_kernel[0], j : j + dim_kernel[1]]
+            output_matrix[i, j] = np.sum(selection * kernel_matrix)
+    # Tip: start by initializing an empty output array (you can use your function above to calculate the correct size).
+    # Then fill the cells in the array with a loop.
+    return(output_matrix)
 
 
 # -----------------------------------------------
