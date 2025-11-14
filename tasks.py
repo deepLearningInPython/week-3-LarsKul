@@ -44,7 +44,7 @@ def convolve_1d(input_array, kernel_array):
         output_array[i] = dot(input_array[i:len_kernel + 1], kernel_array)
     # Tip: start by initializing an empty output array (you can use your function above to calculate the correct size).
     # Then fill the cells in the array with a loop.
-    pass
+    return(output_array)
 
 # -----------------------------------------------
 # Another tip: write test cases like this, so you can easily test your function.
