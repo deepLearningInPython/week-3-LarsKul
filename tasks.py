@@ -40,8 +40,8 @@ def convolve_1d(input_array, kernel_array):
     len_out = compute_output_size_1d(input_array, kernel_array)
     len_kernel = len(kernel_array)
     output_array = np.zeros(len_out)
-    for i in len(len_out):
-        output_array[i] = dot(input_array[i:len_kernel + 1], kernel_array)
+    for i in range(len_out):
+        output_array[i] = np.dot(input_array[i: i + len_kernel], kernel_array)
     # Tip: start by initializing an empty output array (you can use your function above to calculate the correct size).
     # Then fill the cells in the array with a loop.
     return(output_array)
