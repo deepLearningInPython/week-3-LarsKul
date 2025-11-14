@@ -63,7 +63,10 @@ print(convolve_1d(input_array, kernel_array))
 # -----------------------------------------------
 
 def compute_output_size_2d(input_matrix, kernel_matrix):
-    pass
+    cols_out = input_matrix.shape[0] - kernel_matrix.shape[0] + 1
+    rows_out = input_matrix.shape[1] - kernel_matrix.shape[1] + 1
+    dim_out = (rows_out, cols_out)
+    return(dim_out)
 
 
 # -----------------------------------------------
