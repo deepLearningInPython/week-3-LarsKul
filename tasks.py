@@ -1,5 +1,6 @@
 import numpy as np
 
+
 # Follow the tasks below to practice basic Python concepts.
 # Write your code in between the dashed lines.
 # Don't import additional packages. Numpy suffices.
@@ -16,7 +17,8 @@ import numpy as np
 # -----------------------------------------------
 
 def compute_output_size_1d(input_array, kernel_array):
-    pass
+    len_out = input_array.len - kernel_array.len + 1
+    return(len_out)
 
 
 # -----------------------------------------------
